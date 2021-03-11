@@ -26,14 +26,15 @@ import youtube from '../../data/Icon/youtube.png';
 // };
 
 const Detail = () => {
-    const {idLeague} = useParams();
+    const {idTeam} = useParams();
 
-    const [selectedTeam, setSelectedTeam] = useState({});
+    const [selectedTeam, setSelectedTeam] = useState([]);
     useEffect(() => {
-        fetch(`https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=4328`)
+        const url = `https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=4328`;
+        fetch(url)
         .then(res => res.json())
         .then(data => setSelectedTeam(data.teams[0]))
-    }, [idLeague])
+    }, [idTeam])
 
     const {strTeamBadge, strTeam, intFormedYear, strCountry, strSport, strGender, strDescriptionEN, strTwitter, strFacebook, strYoutube} = selectedTeam;
 
@@ -47,7 +48,9 @@ const Detail = () => {
                     <h3><img src={country} alt=""/> Country: {strCountry}</h3>
                     <h3><img src={type} alt=""/> Sport Type: {strSport}</h3>
                     <h3><img src={gender} alt=""/> Gender: {strGender}</h3>
-                    <img src={players} alt="" style={{width:'500px', margin:'0 0 0 700px'}}/>
+                    <div>
+                        <img src={players} alt="" style={{width:'500px', margin:'0 0 0 700px'}}/>
+                    </div>
                 </div>
                 <div className="description"><p>{strDescriptionEN}</p></div>
                 <div className="social-media">
