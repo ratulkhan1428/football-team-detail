@@ -1,0 +1,26 @@
+.all-info{
+    background-color: dimgray;
+    padding: 20px;
+}
+.main-info{
+    background-color: coral;
+    width: 80%;
+    margin-left: 150px;
+    margin-top: 0;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
+}
+.main-info img{
+    width: 20px;
+}
+.description{
+    margin: 0 150px;
+}
+.logo{
+    width: 250px;
+}
+.social-media img{
+    width: 50px;
+    padding: 20px;
+}

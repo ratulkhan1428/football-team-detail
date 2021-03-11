@@ -1,0 +1,21 @@
+.main-button{
+    width: 150px;
+    height: 50px;
+    background-color: grey;
+}
+.cards{
+    margin-bottom: 50px;
+}
+.cards img{
+    width: 150px;
+}
+@media (min-width: 600px){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 900px){
+    .cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+} 

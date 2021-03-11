@@ -1,0 +1,19 @@
+header img{
+    height: 800px;
+    width: 1600px;
+    position: relative;
+}
+  
+.header {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    text-align: center;
+}
+
+.text {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 40px;
+    padding: 16px 32px;
+}
